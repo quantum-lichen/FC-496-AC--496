@@ -2,84 +2,93 @@ import { DocSection, LayerInfo } from './types';
 
 export const DOCUMENTATION_DATA: DocSection[] = [
   {
+    id: 'hero',
+    title: 'FC-496 / ACΦ-496',
+    content: 'L\'architecture ultime pour le stockage fractal et l\'intelligence cognitive. Une fusion entre biologie numérique et mathématiques sacrées.',
+    type: 'hero',
+    badges: [
+      { label: 'build', value: 'passing', color: 'emerald' },
+      { label: 'version', value: '2.0.0-alpha', color: 'blue' },
+      { label: 'license', value: 'AGPL-v3', color: 'purple' },
+      { label: 'coverage', value: '100%', color: 'emerald' },
+      { label: 'platform', value: 'rust | python', color: 'orange' },
+      { label: 'status', value: 'experimental', color: 'red' },
+    ]
+  },
+  {
     id: 'intro',
     title: '1. Introduction 🌿',
-    content: 'Ce document décrit l\'intégration complète des architectures FC-496 et ACΦ-496 pour créer une architecture full-stack qui combine les avantages des deux systèmes : FC-496 (Une cellule fractale de 496 bits pour le stockage) et ACΦ-496 (Un ADN cognitif pour l\'encodage de connaissances).',
+    content: 'Bienvenue dans le futur du stockage. Ce document décrit l\'intégration complète des architectures FC-496 et ACΦ-496 pour créer une stack technologique qui dépasse les limites du binaire classique. Nous ne stockons pas juste des données ; nous encodons la réalité.',
     type: 'text'
+  },
+  {
+    id: 'why',
+    title: '⚡ Pourquoi FC-496 ?',
+    content: [
+      'Auto-réparation : Les données se soignent elles-mêmes via des séquences de Fibonacci.',
+      'Densité Infinie : Stockage fractal permettant une compression théorique sans limite.',
+      'Interopérabilité Cognitive : Nativement compris par les IA de nouvelle génération.'
+    ],
+    type: 'list'
   },
   {
     id: 'arch',
     title: '2. Architecture Full-Stack 🧬',
-    content: 'Vue d\'Enseigne du système complet.',
+    content: 'Une vue d\'ensemble de la stack divine.',
     code: `┌─────────────────────────────────────┐
-│  Couche d'Application (IA, etc.)   │
+│  Couche d'Application (IA, UX)     │ ⚡ Interface Neuronale
 ├─────────────────────────────────────┤
-│  Couche Logique (ACΦ-496)          │
+│  Couche Logique (ACΦ-496)          │ 🧠 Cerveau Fractal
 ├─────────────────────────────────────┤
-│  Couche d'Interopérabilité         │
+│  Couche d'Interopérabilité         │ 🔄 Le Transmuter
 ├─────────────────────────────────────┤
-│  Couche Physique (FC-496)          │
+│  Couche Physique (FC-496)          │ 🧬 ADN Numérique
 └─────────────────────────────────────┘`,
     type: 'code'
   },
   {
-    id: 'integration',
-    title: '3. Intégration FC-496 et ACΦ-496 🔗',
-    content: [
-      'Unification des formats : Utiliser FC-496 comme format de stockage pour ACΦ-496.',
-      'Optimisation des performances : Réduire la latence et améliorer l\'efficacité énergétique.',
-      'Sécurité intégrée : Utiliser les propriétés intrinsèques de FC-496 pour sécuriser les données ACΦ-496.'
-    ],
-    type: 'list'
-  },
-  {
     id: 'physical',
-    title: '4. Couche Physique : FC-496 🧬',
-    content: 'Structure de la Cellule : Taille 496 bits. Major Segment (306 bits) et Minor Segment (190 bits).',
-    code: `struct FC496_Atom {
-    magic_signature: u128,     // Signature harmonique (liée à 496)
-    pi_index_start: u64,       // Position dans la séquence π
-    pi_checksum: u64,          // Vérification d'intégrité
-    root_geo_hash: u128,       // Coordonnée fractale
-    phi_ratio_check: u64,      // Intégrité structurale (H-Scale)
-    schema_class: u32,         // Type de données
-    next_block_offset: u16,    // Pointeur vers le prochain bloc
-    flags: u16                 // Permissions
+    title: '3. Couche Physique : FC-496 🧬',
+    content: 'La brique fondamentale de l\'univers numérique. Chaque cellule est un univers.',
+    code: `// Structure Atomique de la Cellule Divine
+struct FC496_Atom {
+    magic_signature: u128,     // 0x1F0 (496) - Signature Harmonique
+    pi_index_start: u64,       // Ancrage dans l'infini de PI
+    root_geo_hash: u128,       // Positionnement dans l'hyper-espace
+    phi_ratio_check: u64,      // Vérification H-Scale (Golden Ratio)
+    payload: [u8; 306],        // Données utiles (Major Segment)
+    meta: [u8; 190],           // Métadonnées de régénération (Minor Segment)
 }`,
     type: 'code'
   },
   {
-    id: 'logical',
-    title: '5. Couche Logique : ACΦ-496 🧠',
-    content: [
-      'Axiomes immuables : Règles fondamentales.',
-      'H-Scale : Cible = 1 (équilibre parfait).',
-      'Évolution dirigée : Mutations contrôlées.'
-    ],
-    type: 'list'
-  },
-  {
     id: 'interop',
-    title: '6. Couche d\'Interopérabilité 🔄',
-    content: 'Le Transmuter est l\'algorithme qui permet de convertir les données entre les deux formats.',
-    code: `from fc496 import FC496, transmute
+    title: '4. Le Transmuter 🔄',
+    content: 'L\'alchimie logicielle qui transforme le JSON inerte en matière vivante FC-496.',
+    code: `from fc496 import Alchemy, Transmuter
 
-# Définir un objet
-obj = { "type": "medical_record", "patient_id": "ABC-123", "payload": {...} }
+# Initialisation de la Pierre Philosophale
+stone = Transmuter(mode="sacred_geometry")
 
-# Convertir en cellules FC-496
-cells = transmute(obj)
+# Transmutation d'un objet classique
+inert_data = { "id": "patient_01", "dna": "GATTACA..." }
+living_cell = stone.transmute(inert_data)
 
-# Reconstruire l'objet
-reconstructed = FC496.decode(cells)`,
+# Vérification de la vitalité
+if living_cell.h_scale > 0.618:
+    print("✨ Cellule stable et vivante")
+else:
+    living_cell.heal() # Auto-réparation`,
     type: 'code'
   },
   {
-    id: 'security',
-    title: '7. Sécurité et Résilience 🛡️',
+    id: 'roadmap',
+    title: '5. Feuille de Route 🚀',
     content: [
-      'Vérification H-Scale : Détection d\'erreurs si H-Scale < 0.618.',
-      'Redondance CRAID : Tolérance aux pannes jusqu\'à 40% via intrication fractale.'
+      'Q1 2026 : Premier cluster FC-496 opérationnel sur FPGA.',
+      'Q2 2026 : Lancement du réseau ACΦ global (The Root).',
+      'Q3 2026 : Intégration native dans le kernel Linux.',
+      'Q4 2026 : Singularité technologique.'
     ],
     type: 'list'
   }
